@@ -31,3 +31,11 @@ g = []
 h = [1, 2]
 p g.push(h) # => [[1, 2]]
 p g.push(*h) # =>[[1, 2], 1, 2]
+
+i = 'abcdefg'
+p i[2] # => 'c'
+p i[2, 3] # => 'cde'
+i[1, 2] = 'BC'
+p i # 'aBCdefg'
+i << 'HIJ'
+p i
