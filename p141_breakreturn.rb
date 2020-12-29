@@ -5,7 +5,7 @@ def clac_with_break
     target = nil
     numbers.shuffle.each do |n|
         target = n
-        break if n.even?
+        break if n.even? # => get out from repeat process
     end
     p target * 10
 end
@@ -17,7 +17,7 @@ def clac_with_return
     target = nil
     numbers.shuffle.each do |n|
         target = n
-        return if n.even?
+        return if n.even? # => get out from method
     end
     p target * 10
 end
