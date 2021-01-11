@@ -14,4 +14,4 @@ p text.scan(/<option value="([a-z0-9_]+)">(.*)<\/option>/) # => * means 0 or 1 o
 p text.scan(/<option value="([a-z0-9_]+)"( selected)?>(.*)<\/option>/) # => [["none", nil, ""], ["pc", " selected", "PC"], ["ps5", nil, "PS5"], ["switch", nil, "Switch"]]
 p text.scan(/<option value="([a-z0-9_]+)"(?: selected)?>(.*)<\/option>/) # => [["none", ""], ["pc", "PC"], ["ps5", "PS5"], ["switch", "Switch"]]
 p text.scan(/<option value="(\w+)"(?: selected)?>(.*)<\/option>/) # \w includes a-z, 0-9, A-Z
-p text.scan(/<option value="(\w+)"(?: selected)?>([ˆ<]*)<\/option>/) # how to input ˆ => option + i, ˆ< means except for <
+p text.scan(/<option value="(\w+)"(?: selected)?>([^<]*)<\/option>/) # how to input ^ => shift + 6, ˆ< means except for <
