@@ -1,4 +1,4 @@
-# ruby p206_hash_class_def.rb
+# ruby p206_hash_class_diff.rb
 
 # hash
 
