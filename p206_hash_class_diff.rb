@@ -32,7 +32,7 @@ class User
     end
 
     def full_name_class(user)
-        "#{user.first_name} #{user.last_name}"
+        "#{@first_name} #{@last_name}"
     end
 end
 
