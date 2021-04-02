@@ -28,7 +28,7 @@ end # => "2021/1/18"
 # can't use text =~ /xxx/, it will make a error
 # can't use regexp(variable) =~ text too.
 
-#scan
+# scan
 # 'string'.scan(/xxx/) return a array
 p '2000y, 7m, 17d 2021y, 1m, 18d'.scan(/\d+y, \d+m, \d+d/) # => ["2000y, 7m, 17d", "2021y, 1m, 18d"]
 p '2000y, 7m, 17d 2021y, 1m, 18d'.scan(/(\d+)y, (\d+)m, (\d+)d/) # => [["2000", "7", "17"], ["2021", "1", "18"]]
@@ -38,7 +38,7 @@ p '2000y, 7m, 17d 2021y, 1m, 18d'.scan(/(?:\d+)y, (?:\d+)m, (?:\d+)d/) # => ["20
 text = '+81,3457-7890'
 p text.split(/,|-/) # => ["+81", "3457", "7890"]
 
-#gsub
+# gsub
 text = '123,456-7890'
 p text.gsub(',', '-') # => "123-456-7890"
 p text.gsub(/,|-/, ':') # => "123:456:7890"
