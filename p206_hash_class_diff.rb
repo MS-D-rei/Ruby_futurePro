@@ -23,7 +23,9 @@ end
 # class
 
 class User
-    attr_reader :first_name, :last_name, :age
+    attr_reader :first_name, :last_name, :age # read only
+    # attr_accessor :first_name, :last_name, :age => read and write
+    # attr_writer : first_name, :last_name, :age => write only
 
     def initialize(first_name, last_name, age)
         @first_name = first_name
