@@ -5,7 +5,7 @@ class User
         "Hello, I am #{name}"
     end
 
-    # can't call private method without receiver
+    # can't call private method with receiver
     private
 
     def name
