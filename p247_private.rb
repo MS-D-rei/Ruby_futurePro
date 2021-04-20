@@ -13,5 +13,19 @@ class User
     end
 end
 
+class VIP < User
+    # overwrite hello method
+    def hello
+        "Appriciate to meet you, Ms. #{name}"
+    end
+    def to_s
+        # can use private method of super class
+        "name: #{name}"
+    end
+end
+
 user = User.new
+vip = VIP.new
 p user.hello
+p vip.hello
+p vip.to_s
