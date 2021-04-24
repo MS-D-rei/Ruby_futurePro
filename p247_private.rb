@@ -5,8 +5,12 @@ class User
         "Hello, I am #{name}"
     end
 
+    def foo
+        'foo'
+    end
+
     # can't call private method with receiver
-    private
+    private :foo # can add public method as private
 
     def name
         'Alice'
@@ -16,7 +20,7 @@ end
 class VIP < User
     # overwrite hello method
     def hello
-        "Appriciate to meet you, Ms. #{name}"
+        "Glad to meet you, Ms. #{name}"
     end
     def to_s
         # can use private method of super class
