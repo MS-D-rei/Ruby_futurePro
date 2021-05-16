@@ -8,7 +8,9 @@ end
 
 class Product
     extend PutsLog
+    # mix module method in class method
 
+    # make class method
     def self.create_products(names)
         log 'create_products is called.'
         puts "#{names} is created."
@@ -17,4 +19,5 @@ end
 
 Product.create_products([])
 
+# can call log method directly as class method.
 Product.log('Hello')

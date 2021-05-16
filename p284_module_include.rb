@@ -8,6 +8,7 @@ end
 
 class Product
     include PutsLog
+    # mix PutsLog in as a instance method
 
     def title
         log 'title is called.'
