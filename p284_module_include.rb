@@ -30,3 +30,10 @@ puts product.title
 
 user = User.new
 puts user.name
+
+puts Product.include?(PutsLog)
+p Product.included_modules # => [PutsLog, Kernel]
+p Product.ancestors # => [Product, PutsLog, Object, Kernel, BasicObject]
+
+puts product.class.include?(PutsLog) # => true
+puts product.is_a?(PutsLog) # => true
