@@ -13,6 +13,7 @@ end
 
 def greeting_en(&block)
     texts = ['morning', 'afternoon', 'evening']
+    # can pass block arguments to other method
     greeting_common(texts, &block)
 end
 
