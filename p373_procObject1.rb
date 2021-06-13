@@ -8,6 +8,7 @@ puts add_proc.call
 puts add_proc.call(10)
 puts add_proc.call(10, 20)
 
+# we can pass proc object as block argument.
 def greeting(&block)
     puts block.class
     puts 'morning'
