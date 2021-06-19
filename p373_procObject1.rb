@@ -4,9 +4,16 @@
 add_proc = Proc.new { |a = 0, b = 0| a + b }
 
 # call method can run the content of the block with arguments.
+# Proc don't need the same number of arguments.
 puts add_proc.call
-puts add_proc.call(10)
+puts add_proc.call(10) # => 10, works.
 puts add_proc.call(10, 20)
+
+# the diff between proc and lambda. Lambda needs the same number of arguments.
+add_lambda = ->(a, b) { a + b }
+
+puts add_lambda.call(10, 20) # => 30
+# add_lambda.call(10) => ArgumentError: wrong number of arguments(given 1, expected 2)
 
 # we can pass proc object as block argument.
 def greeting(&block)
