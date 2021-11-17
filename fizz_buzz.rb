@@ -1,27 +1,18 @@
-def fizz_buzz(n)
-    if n % 15 == 0
-        "Fizz buzz"
-    elsif n % 3 == 0
-        "Fizz"
-    elsif n % 5 == 0
-        "Buzz"
-    else
-        n.to_s
-    end
-end
+# frozen_string_literal: true
 
-require 'minitest/autorun'
+# for test
+# ruby test/fizz_buzz_test.rb
 
-class FizzBuzzTest < Minitest::Test
-    def test_fizz_buzz
-        assert_equal '1', fizz_buzz(1)
-        assert_equal '2', fizz_buzz(2)
-        assert_equal 'Fizz', fizz_buzz(3)
-        assert_equal '4', fizz_buzz(4)
-        assert_equal 'Buzz', fizz_buzz(5)
-        assert_equal 'Fizz', fizz_buzz(6)
-        assert_equal 'Fizz buzz', fizz_buzz(15)
-    end
+def fizz_buzz(number)
+  if (number % 15).zero?
+    'Fizz buzz'
+  elsif (number % 3).zero?
+    'Fizz'
+  elsif (number % 5).zero?
+    'Buzz'
+  else
+    number.to_s
+  end
 end
 
 # puts fizz_buzz(1)
