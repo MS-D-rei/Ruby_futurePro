@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 # ruby p143_redo.rb
 
-foods = ['bread', 'rice', 'noodle']
+foods = %w[bread rice noodle]
 foods.each do |food|
-    print "Do you like #{food}? => "
-    answer = ['Yes', 'No'].sample
-    puts answer
+  print "Do you like #{food}? => "
+  answer = %w[yes no].sample
+  puts answer
 
-    redo unless answer == 'Yes'
+  redo unless answer == 'Yes'
 end
