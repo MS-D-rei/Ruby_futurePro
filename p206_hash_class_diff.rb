@@ -1,17 +1,19 @@
+# frozen_string_literal: true
+
 # ruby p206_hash_class_diff.rb
 
 # hash
 
 users = []
-users << {first_name: 'Alice', last_name: 'Ruby', age: 20}
-users << {first_name: 'Bob', last_name: 'Python', age: 30}
+users << { first_name: 'Alice', last_name: 'Ruby', age: 20 }
+users << { first_name: 'Bob', last_name: 'Python', age: 30 }
 
 def full_name_hash(user)
-    "#{user[:first_name]} #{user[:last_name]}"
+  "#{user[:first_name]} #{user[:last_name]}"
 end
 
 users.each do |user|
-    puts "#{full_name_hash(user)}, #{user[:age]}"
+  puts "#{full_name_hash(user)}, #{user[:age]}"
 end
 
 # hash characteristics
@@ -23,19 +25,20 @@ end
 # class
 
 class User
-    attr_reader :first_name, :last_name, :age # read only
-    # attr_accessor :first_name, :last_name, :age => read and write
-    # attr_writer : first_name, :last_name, :age => write only
+  attr_reader :first_name, :last_name, :age # read only
 
-    def initialize(first_name, last_name, age)
-        @first_name = first_name
-        @last_name = last_name
-        @age = age
-    end
+  # attr_accessor :first_name, :last_name, :age => read and write
+  # attr_writer : first_name, :last_name, :age => write only
 
-    def full_name_class(user)
-        "#{@first_name} #{@last_name}"
-    end
+  def initialize(first_name, last_name, age)
+    @first_name = first_name
+    @last_name = last_name
+    @age = age
+  end
+
+  def full_name_class
+    "#{@first_name} #{@last_name}"
+  end
 end
 
 users = []
@@ -43,7 +46,7 @@ users << User.new('Alice', 'Ruby', 20)
 users << User.new('Bob', 'Python', 30)
 
 users.each do |user|
-    puts "#{user.full_name_class(user)}, #{user.age}"
+  puts "#{user.full_name_class}, #{user.age}"
 end
 
 # class characteristics
