@@ -23,7 +23,6 @@ end
 # users[0][:country] = 'Japan'
 
 # class
-
 class User
   attr_reader :first_name, :last_name, :age # read only
 
